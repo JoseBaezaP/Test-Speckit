@@ -31,7 +31,19 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+**Required Compliance Gates**:
+
+- [ ] **Component-First**: Design uses shadcn/ui components (Table, Form, Input, Button, Card) or reusable React components
+- [ ] **Type Safety**: All data models and APIs have TypeScript interfaces defined, no `any` types planned
+- [ ] **UX-Driven**: Design includes loading states, error handling, success confirmations for all user actions
+- [ ] **Responsive Design**: Component layouts account for desktop (≥1024px), tablet (≥768px), and mobile (≥320px) breakpoints
+- [ ] **MVP-First**: User stories are prioritized (P1, P2, P3) and independently testable, no cross-story dependencies blocking MVP
+
+**Violations Requiring Justification** (if any):
+
+| Violated Principle | Why Needed | Simpler Alternative Rejected |
+|--------------------|-------------|-----------------------------|
+| [Principle name]   | [reason]    | [alternative not chosen]     |
 
 ## Project Structure
 
