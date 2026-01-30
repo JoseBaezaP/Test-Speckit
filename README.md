@@ -13,22 +13,26 @@ Aplicación web para gestionar el menú de un restaurante, permitiendo agregar, 
 ## Screenshots
 
 ### Dashboard
+
 ![Dashboard](img/img1.png)
 
 ### Menú de Platillos
+
 ![Menú](img/img2.png)
 
 ## Instalación
 
 1. Clona el repositorio:
+
 ```bash
 git clone <url-del-repositorio>
 cd restaurant-menu
 ```
 
 2. Instala las dependencias:
+
 ```bash
-npm install
+yarn install
 ```
 
 ## Cómo correr el proyecto
@@ -36,8 +40,9 @@ npm install
 ### Modo Desarrollo
 
 Para iniciar el servidor de desarrollo:
+
 ```bash
-npm run dev
+yarn dev
 ```
 
 La aplicación estará disponible en `http://localhost:5173`
@@ -45,21 +50,15 @@ La aplicación estará disponible en `http://localhost:5173`
 ### Modo Producción
 
 Para construir la aplicación para producción:
-```bash
-npm run build
-```
 
-Para previsualizar la construcción:
 ```bash
-npm run preview
+yarn build
 ```
 
 ## Scripts Disponibles
 
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Previsualiza la construcción de producción
-- `npm run lint` - Ejecuta ESLint para verificar el código
+- `yarn dev` - Inicia el servidor de desarrollo
+- `yarn build` - Construye la aplicación para producción
 
 ## Tecnologías
 
@@ -95,6 +94,7 @@ restaurant-menu/
 ## Desarrollo
 
 El proyecto sigue las siguientes convenciones:
+
 - TypeScript en modo estricto
 - Componentes funcionales con hooks
 - Tailwind CSS para estilos
