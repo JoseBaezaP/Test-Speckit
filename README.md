@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# Sistema de Menú de Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para gestionar el menú de un restaurante, permitiendo agregar, editar, eliminar y controlar la disponibilidad de platillos.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dashboard**: Interfaz para agregar nuevos platillos al menú
+- **Gestión de Menú**: Tabla interactiva con todos los platillos
+- **Control de Disponibilidad**: Toggle para marcar platillos como disponibles o agotados
+- **Eliminación de Platillos**: Funcionalidad para eliminar platillos del menú
+- **Diseño Responsivo**: Interfaz adaptada para móviles y escritorio
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dashboard
+![Dashboard](img/img1.png)
 
-## Expanding the ESLint configuration
+### Menú de Platillos
+![Menú](img/img2.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Instalación
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clona el repositorio:
+```bash
+git clone <url-del-repositorio>
+cd restaurant-menu
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instala las dependencias:
+```bash
+npm install
 ```
+
+## Cómo correr el proyecto
+
+### Modo Desarrollo
+
+Para iniciar el servidor de desarrollo:
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:5173`
+
+### Modo Producción
+
+Para construir la aplicación para producción:
+```bash
+npm run build
+```
+
+Para previsualizar la construcción:
+```bash
+npm run preview
+```
+
+## Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run preview` - Previsualiza la construcción de producción
+- `npm run lint` - Ejecuta ESLint para verificar el código
+
+## Tecnologías
+
+- **React 19+** - Biblioteca para la interfaz de usuario
+- **TypeScript 5+** - Tipado estático en modo estricto
+- **Vite** - Herramienta de construcción rápida
+- **Tailwind CSS 4+** - Framework de CSS
+- **shadcn/ui** - Componentes de UI reutilizables
+- **zod** - Validación de formularios
+- **React Hook Form** - Gestión de formularios
+- **Lucide React** - Iconos
+
+## Estructura del Proyecto
+
+```
+restaurant-menu/
+├── src/
+│   ├── components/
+│   │   ├── features/        # Componentes de funcionalidades específicas
+│   │   │   ├── dish-form/    # Formulario para agregar platillos
+│   │   │   ├── dish-table/   # Tabla de platillos
+│   │   │   └── availability/  # Control de disponibilidad
+│   │   ├── layout/           # Componentes de layout
+│   │   └── ui/               # Componentes UI de shadcn/ui
+│   ├── hooks/                # Custom hooks de React
+│   ├── App.tsx               # Componente principal
+│   └── main.tsx              # Punto de entrada
+├── public/                   # Archivos estáticos
+├── img/                      # Imágenes del proyecto
+└── package.json
+```
+
+## Desarrollo
+
+El proyecto sigue las siguientes convenciones:
+- TypeScript en modo estricto
+- Componentes funcionales con hooks
+- Tailwind CSS para estilos
+- Validación de formularios con zod
+- ESLint para linting
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para cualquier mejora.
